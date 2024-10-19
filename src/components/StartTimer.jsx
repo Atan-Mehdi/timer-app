@@ -160,7 +160,12 @@ export default function StartTimer({ hr, min, sec }) {
                                 suppressContentEditableWarning={true}
                                 onInput={(e) => {
                                     const newHr = e.currentTarget.textContent;
-                                    setHours(newHr);
+                                    console.log(newHr);
+                                    if (newHr.length > 2 || newHr.length < 0) {
+                                        alert('Number should be of length 2');
+                                    } else {
+                                        setHours(newHr);
+                                    }
                                 }}
                                 style={numbers}>00</p>
                             <p>Hours</p>
@@ -172,7 +177,11 @@ export default function StartTimer({ hr, min, sec }) {
                                 suppressContentEditableWarning={true}
                                 onInput={(e) => {
                                     const newMin = e.currentTarget.textContent;
-                                    setMinutes(newMin);
+                                    if (newMin.length > 2 || newMin.length < 0) {
+                                        alert('Number should be of length 2');
+                                    } else {
+                                        setMinutes(newMin);
+                                    }
                                 }}
                                 style={numbers}>00</p>
                             <p>Minutes</p>
@@ -184,7 +193,11 @@ export default function StartTimer({ hr, min, sec }) {
                                 suppressContentEditableWarning={true}
                                 onInput={(e) => {
                                     const newSec = e.currentTarget.textContent;
-                                    setSeconds(newSec);
+                                    if (newSec.length > 2 || newSec.length < 0) {
+                                        alert('Number should be of length 2');
+                                    } else {
+                                        setSeconds(newSec);
+                                    }
                                 }}
                                 style={numbers}>00</p>
                             <p>Seconds</p>
