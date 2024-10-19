@@ -45,17 +45,35 @@
 }
 
 input {
-  height: 50px;
-  margin: 10px;
-  border-radius: 20px;
+  border-color: transparent;
+  background-color: transparent;
+
+}
+
+
+input:active {
   text-align: center;
-  /* font-size: medium; */
+  border-color: transparent;
+  border: transparent;
 }
 
 ::placeholder {
   text-align: center;
+  height: 210px;
 }
 
-input:active {
-  text-align: center;
+.editing {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.clock {
+
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #888;
 }
