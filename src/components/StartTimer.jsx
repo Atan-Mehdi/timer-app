@@ -29,7 +29,7 @@ export default function StartTimer({ hr, min, sec }) {
     const clickedRef = useRef(null);
     const [startTimer, setStartTimer] = useState(true);
     const clock = useRef(null);
-
+    const [heading, setHeading] = useState('Start the Timer');
 
     // useEffect(function () {
     //     timerRef.current = setInterval(function () {
@@ -46,6 +46,7 @@ export default function StartTimer({ hr, min, sec }) {
     // }, []);
 
     function start() {
+        setHeading('Timer has Started')
         setStartTimer(s => !s);
         timerRef.current = setInterval(function () {
             // setSeconds((s) => s == 0 ? s + 59 : s - 1);
@@ -109,12 +110,13 @@ export default function StartTimer({ hr, min, sec }) {
 
     return (
         <div>
-            <h1>
-                Timer has started
-            </h1>
+
 
             {!editState &&
                 <div>
+                    <h1>
+                        {heading}
+                    </h1>
                     <div style={style}>
                         <div onClick={edit} style={watch}>
                             <p
@@ -147,6 +149,9 @@ export default function StartTimer({ hr, min, sec }) {
 
             {editState &&
                 <div>
+                    <h1>
+                        Set Timer
+                    </h1>
                     <div style={style}>
                         <div style={watch}>
                             <p
