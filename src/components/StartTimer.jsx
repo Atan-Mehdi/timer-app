@@ -136,9 +136,11 @@ export default function StartTimer({ hr, min, sec }) {
                     </div>
                     {startTimer && <div>
                         <button onClick={start}>Start</button>
+                        <p>Click on timer to edit</p>
                     </div>}
                     {!startTimer && <div>
                         <button onClick={stopTimer}>Stop</button>
+                        <p>Click on timer to edit</p>
                     </div>}
                 </div>}
 
